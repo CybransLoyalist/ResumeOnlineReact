@@ -1,77 +1,104 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~font-awesome/css/font-awesome.min.css";
-
-.navbar {
-  border-bottom: 3px solid #008ed6;
-  opacity: 0.8;
-  z-index: 2000; }
-
-.nav-link {
-  font-size: 20px; }
+$primary-color: #008ed6;
+@import "navigationBar.scss";
 
 .img-circle {
-  border-radius: 50%; }
+  border-radius: 50%;
+}
 
 .progress {
   height: 30px;
   margin-bottom: 15px;
-  background: none; }
+  background: none;
+}
 
 .progress-bar {
   font-size: 20px;
   align-items: left;
-  justify-content: left; }
-  .progress-bar span {
-    margin-left: 10px; }
+  justify-content: left;
+}
+
+.progress-bar span {
+  margin-left: 10px;
+}
 
 .header-item {
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-top: 20px;
-  border-top: 4px solid #008ed6; }
+  border-top: 4px solid $primary-color;
+}
+body {
+      position: relative;
+  }
+section{
+   padding-top:45px;
+}
 
+.btn-whiteBordered
+{
+  border: 1px solid #fff !important;
+}
 #showcase {
-  position: relative;
+  // position: relative;
+  // margin-top:80px;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/background-1.jpeg");
   background-repeat: no-repeat;
-  min-height: 800px; }
+  min-height: 800px;
+}
 
 #skills {
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/background-2.jpg");
   background-repeat: no-repeat;
-  min-height: 800px; }
+  min-height: 900px;
+}
+
+#contactMe {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/background-3.jpeg");
+  background-repeat: no-repeat;
+  min-height: 900px;
+}
 
 .fa {
-  font-size: 30px; }
+  font-size: 30px;
+}
 
 .fa-clickable:hover {
-  cursor: pointer !important; }
+  cursor: pointer !important;
+}
 
 .timeline {
   width: 5px;
   height: 1100px;
   padding-top: 50px;
-  background: -webkit-linear-gradient(rgba(0, 142, 214, 0), #008ed6, rgba(0, 142, 214, 0));
+  background: -webkit-linear-gradient(rgba(0, 142, 214, 0), $primary-color, rgba(0, 142, 214, 0));
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(0, 142, 214, 0), #008ed6, rgba(0, 142, 214, 0));
+  background: -o-linear-gradient(rgba(0, 142, 214, 0), $primary-color, rgba(0, 142, 214, 0));
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(0, 142, 214, 0), #008ed6, rgba(0, 142, 214, 0));
+  background: -moz-linear-gradient(rgba(0, 142, 214, 0), $primary-color, rgba(0, 142, 214, 0));
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(0, 142, 214, 0), #008ed6, rgba(0, 142, 214, 0)); }
+  background: linear-gradient(rgba(0, 142, 214, 0), $primary-color, rgba(0, 142, 214, 0));
+}
 
 .timeline-content {
-  width: 500px; }
+  width: 500px;
+}
 
 .popover {
   max-width: 30%;
-  min-width: 200px; }
+  min-width: 200px;
+}
 
 .timeline-content-header {
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .timeline-content-subheader {
-  font-size: 12px; }
+  font-size: 12px;
+}
 
 .timeline-item {
   position: relative;
@@ -82,24 +109,32 @@
   margin-left: -23px;
   vertical-align: middle;
   z-index: 5;
-  margin-top: 100px; }
+  margin-top: 100px;
+}
 
 .logo {
   background-position: center !important;
   background-size: contain !important;
-  background-repeat: no-repeat !important; }
+  background-repeat: no-repeat !important;
+}
 
 #motabi {
-  background: #fff url("../../src/img/motabi.png"); }
+  background: #fff url("../../src/img/motabi.png");
+}
 
 #nokia {
-  background: #fff url("../../src/img/nokia.png"); }
+  background: #fff url("../../src/img/nokia.png");
+}
 
-#vsoft, #vsoftInternship {
-  background: #fff url("../../src/img/vsoft.png"); }
+#vsoft,
+#vsoftInternship {
+  background: #fff url("../../src/img/vsoft.png");
+}
 
-#jagiellonianUniversityMastersDegree, #jagiellonianUniversityBachelorsDegree {
-  background: #fff url("../../src/img/jagiellonianUniversity.png"); }
+#jagiellonianUniversityBachelorsDegree,
+#jagiellonianUniversityMastersDegree {
+  background: #fff url("../../src/img/jagiellonianUniversity.png");
+}
 
 .timeline-icon {
   color: #fff;
@@ -107,38 +142,80 @@
   height: 50px;
   text-align: center;
   position: relative;
-  top: 10px; }
+  top: 10px;
+}
 
 .timeline-icon > i {
-  color: white; }
+  color: white;
+}
 
 .popover {
-  max-width: 40%; }
+  max-width: 40%;
+}
 
 .timeline-content-header {
   font-size: 20px;
-  border-bottom: 1px solid #008ed6;
-  margin-bottom: 5px; }
+  border-bottom: 1px solid $primary-color;
+  margin-bottom: 5px;
+}
 
 .section-primary {
-  background: rgba(0, 142, 214, 0.5); }
+  background: rgba(0, 142, 214, 0.5);
+}
+
+.white-link
+{
+  color: #fff !important;
+  padding-left: 10px !important;
+}
+
+.popover-body {
+  max-width: 500px;
+}
 
 @media (max-width: 768px) {
   #showcase {
-    min-height: 1271px; }
-  .timeline {
-    position: absolute;
-    margin-right: 5px;
-    height: 2600px; }
-  .popover {
-    max-width: 70%; }
-  .timeline-item {
-    margin-top: 300px; }
+    min-height: 1200px;
+  }
+
   .img-circle {
     height: 250px;
-    width: 250px; }
+    width: 250px;
+  }
+
+  .timeline {
+    margin-right: 5px !important;
+    height: 2200px;
+  }
+
+  .popover {
+    max-width: 70%;
+  }
+
+  .timeline-item {
+    margin-bottom: 300px;
+  }
+
+  .popover-body {
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   .header-item {
     margin-top: 5px;
-    padding: 10px !important; }
+    padding: 10px !important;
+  }
+
   .display-3 {
-    font-size: 45px !important; } }
+    font-size: 45px !important;
+  }
+  .progress {
+     margin-bottom:6px;
+  }
+
+  .progress-bar {
+    font-size: 14px;
+    padding-top: 4px;
+  }
+}

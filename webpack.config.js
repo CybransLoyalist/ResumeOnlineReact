@@ -18,7 +18,7 @@ module.exports = {
         query: {
           presets: ['react', 'es2015', 'stage-1']
         }
-      },       
+      },
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?mimetype=image/svg+xml'},
             {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
             {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
@@ -40,7 +40,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      'waypoints': 'waypoints/lib/jquery.waypoints.js'
+    }
   },
   devServer: {
     historyApiFallback: true,
@@ -49,6 +52,7 @@ module.exports = {
   plugins: [new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
+      waypoints: "waypoints",
       'window.jQuery': 'jquery',
       Popper: [
         'popper.js', 'default'

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LinkIcon from './LinkIcon';
+import ABOUT from "../data/About";
 
 export default class Showcase extends Component {
   render() {
@@ -14,8 +16,8 @@ export default class Showcase extends Component {
                     <img src="src/img/kslusarczyk.jpg" className="img-fluid img-circle" alt="Cinque Terre"/>
                   </div>
                   <div className="p-4">
-                    <button className="btn btn-primary p-1  fa-clickable" style={{backgroundColor: '#0077B5'}}><i className="fa fa-linkedin" aria-hidden="true" style={{color: '#white'}}></i></button>
-                    <button className="btn btn-dark p-1  fa-clickable" style={{backgroundColor: '#333'}}><i className="fa fa-github" aria-hidden="true" style={{color: '#white'}}></i></button>
+                    <LinkIcon href="https://www.linkedin.com/in/krystyna-%C5%9Blusarczyk-634576a4/" icon="fa-linkedin" buttonClass="btn-primary"/>
+                    <LinkIcon href="https://github.com/KrystynaSlusarczyk" icon="fa-github" buttonClass="btn-dark"/>
                   </div>
                 </div>
               </div>
@@ -24,18 +26,16 @@ export default class Showcase extends Component {
                   <div className="p-4 lead header-item">Krystyna Ślusarczyk</div>
                   <div className="p-4 lead header-item">.NET Software Developer</div>
                   <div className="p-4 lead header-item">Motabi Ltd.</div>
-                  <div className="p-4 lead header-item"><i className="fa fa-envelope" aria-hidden="true"></i> slusarczyk.krystyna@gmail.com</div>
+                  <div className="p-4 lead header-item"><i className="fa fa-envelope" aria-hidden="true" onClick={() => this.sendEmail()}></i> slusarczyk.krystyna@gmail.com</div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="container text-light" id="aboutMe">
+          <div className="container text-light" id="aboutMe" style={{paddingTop: 45}}>
             <div className="row">
               <div className="col">
                 <h1 className="display-3">About me</h1>
-                <p className="lead">I'm a passionate .NET software developer with strong focus on code quality. I'm familiar with object oriented programming and I'm aware
-  of importance of good design. I never let my code to be messy or inelegant. Every day I'm trying to improve myself - by reading books,
-  blogs, taking courses, creating personal projects and learing from people I work with. </p>
+                <p className="lead">{ABOUT}</p>
               </div>
             </div>
           </div>
@@ -43,5 +43,17 @@ export default class Showcase extends Component {
       </section>
     </div>
     );
+  }
+
+  sendEmail()
+  {
+    var link = "mailto:me@example.com"
+             + "?cc=myCCaddress@example.com"
+             + "&subject=" + escape("This is my subject")
+             + "&body=aaa";
+    ;
+
+    window.location.href = link;
+
   }
 }

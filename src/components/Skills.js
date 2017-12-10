@@ -9,7 +9,7 @@ export default class Skills extends Component {
     return (
     <div>
       <section id="skills" >
-      <div className="container text-light" style={{paddingTop: 80}}>
+      <div className="container text-light">
         <h1 className="display-3">Skills</h1>
         <div className="m-2 py-2">
           {

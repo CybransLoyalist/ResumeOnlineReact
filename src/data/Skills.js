@@ -1,7 +1,7 @@
 const SKILLS = [
   {name: "C#", value: 0.9},
   {name: ".NET Platform", value: 0.85},
-  {name: "Visual Studio + ReSharper / Rider", value: 0.75},
+  {name: "Visual Studio + ReSharper", value: 0.75},
   {name: ".NUnit + Moq", value: 0.88},
   {name: ".ASP. NET MVC", value: 0.75},
   {name: "React + Redux", value: 0.70},

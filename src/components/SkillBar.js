@@ -16,7 +16,6 @@ export default class SkillBar extends Component {
 
   GetBackgroundClass()
   {
-    debugger;
     if(this.props.value >= 0.7)
     {
       return "bg-success";

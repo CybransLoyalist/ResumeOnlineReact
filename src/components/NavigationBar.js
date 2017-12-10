@@ -1,27 +1,60 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import NavigationBarLink from './NavigationBarLink';
+// import * from 'waypoints';
 
 export default class NavigationBar extends Component {
+
+  constructor()
+  {
+    super();
+    this.setActive = this.setActive.bind(this);
+    this.state = {
+      activeTab: "#aboutMe",
+      allTabs: [
+        {
+          href: "#aboutMe",
+          text: "About me"
+        }, {
+          href: "#experienceAndEducation",
+          text: "Experience & Education"
+        },
+        {
+          href: "#skills",
+          text: "Skills"
+        },
+        {
+          href: "#certificates",
+          text: "Certificates"
+        },
+        {
+          href: "#contactMe",
+          text: "Contact me"
+        },
+      ]
+    }
+  }
   render() {
     return (
       <div>
-      <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-      <div className="container">
-        <a href="index.html" className="navbar-brand">Krystyna Ślusarczyk</a>
-        <button className="navbar-toggler" data-toggle="collapse" data-target="#topNavbar">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="topNavbar">
-          <ul className="navbar-nav ml-auto">
-            <NavigationBarLink href="#aboutMe" text="About me"/>
-            <NavigationBarLink href="#experienceAndEducation" text="Experience & Education"/>
-            <NavigationBarLink href="#skills" text="Skills"/>
-            <NavigationBarLink href="#contactMe" text="Contact me"/>
-          </ul>
-        </div>
+        <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
+          <div className="container">
+            <span onClick={() => {$(window).scrollTop(0)}} className="navbar-brand">Krystyna Ślusarczyk</span>
+            <button className="navbar-toggler" data-toggle="collapse" data-target="#topNavbar">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="topNavbar">
+              <ul className="navbar-nav ml-auto">
+                {this.state.allTabs.map((tab) => <NavigationBarLink setActive={this.setActive} href={tab.href} text={tab.text} active={this.state.active}/>)}
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
-    </div>
     );
+  }
+
+  setActive(tab)
+  {
+    this.setState({active: tab});
   }
 }
