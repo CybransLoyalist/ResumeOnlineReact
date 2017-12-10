@@ -29,7 +29,7 @@ export default class Showcase extends Component {
               </div>
             </div>
           </div>
-          <div className="container text-light">
+          <div className="container text-light" id="aboutMe">
             <div className="row">
               <div className="col">
                 <h1 className="display-3">About me</h1>

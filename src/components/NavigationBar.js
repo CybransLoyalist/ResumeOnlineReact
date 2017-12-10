@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavigationBarLink from './NavigationBarLink';
 
 export default class NavigationBar extends Component {
   render() {
@@ -12,18 +13,10 @@ export default class NavigationBar extends Component {
         </button>
         <div className="collapse navbar-collapse" id="topNavbar">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a href="#home" className="nav-link">Home</a>
-            </li>
-            <li className="nav-item">
-              <a href="#explore-head-section" className="nav-link">Explore</a>
-            </li>
-            <li className="nav-item">
-              <a href="#create-head-section" className="nav-link">Create</a>
-            </li>
-            <li className="nav-item">
-              <a href="#share-head-section" className="nav-link">Share</a>
-            </li>
+            <NavigationBarLink href="#aboutMe" text="About me"/>
+            <NavigationBarLink href="#experienceAndEducation" text="Experience & Education"/>
+            <NavigationBarLink href="#skills" text="Skills"/>
+            <NavigationBarLink href="#contactMe" text="Contact me"/>
           </ul>
         </div>
       </div>
