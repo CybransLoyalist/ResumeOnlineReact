@@ -1,23 +1,23 @@
-# ReduxSimpleStarter
+# Krystyna Ślusarczyk - Resume online
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Check my [LinkedIn](https://www.linkedin.com/in/krystyna-%C5%9Blusarczyk-634576a4/)
 
-### Getting Started
+### How to launch this project:
 
-There are two methods for getting started with this repo.
+There are two methods for getting started with this project.
 
 #### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+Checkout this repository.
 
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
+> git clone https://github.com/CybransLoyalist/ResumeOnlineReact.git
+> cd ResumeOnlineReact
 > npm install
 > npm start
 ```
 
 #### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Click [here](https://github.com/CybransLoyalist/ResumeOnlineReact/archive/master.zip) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
 > npm install
