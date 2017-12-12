@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import TimelineItem from './TimelineItem';
 import SkillBar from './SkillBar';
-import SKILLS from "../data/SKILLS";
+import SKILLS from "../../data/SKILLS";
 
 export default class Skills extends Component {
 

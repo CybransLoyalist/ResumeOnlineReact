@@ -1,0 +1,9 @@
+.contactBox{
+  background-color: $primary-color;
+  border-radius: 5px;
+}
+
+#contactMe {
+    @extend .pictureBackground;
+  background: $dark-gradient, url("../../src/img/background-3.jpeg");
+}

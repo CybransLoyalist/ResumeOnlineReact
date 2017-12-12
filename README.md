@@ -2,9 +2,16 @@
 
 Check my [LinkedIn](https://www.linkedin.com/in/krystyna-%C5%9Blusarczyk-634576a4/)
 
+### What's inside:
+* React
+* Bootstrap 4
+* Sass
+* Webpack
+
+
 ### How to launch this project:
 
-There are two methods for getting started with this project.
+There are two methods for getting started with this project:
 
 #### Familiar with Git?
 Checkout this repository.

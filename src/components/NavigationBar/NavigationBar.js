@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import NavigationBarLink from './NavigationBarLink';
-// import * from 'waypoints';
 
 export default class NavigationBar extends Component {
 
@@ -44,7 +43,7 @@ export default class NavigationBar extends Component {
             </button>
             <div className="collapse navbar-collapse" id="topNavbar">
               <ul className="navbar-nav ml-auto">
-                {this.state.allTabs.map((tab) => <NavigationBarLink setActive={this.setActive} href={tab.href} text={tab.text} active={this.state.active}/>)}
+                {this.renderTabs()}
               </ul>
             </div>
           </div>
@@ -56,5 +55,15 @@ export default class NavigationBar extends Component {
   setActive(tab)
   {
     this.setState({active: tab});
+  }
+
+  renderTabs()
+  {
+    return this.state.allTabs.map((tab) =>
+    <NavigationBarLink
+       setActive={this.setActive}
+       href={tab.href}
+       text={tab.text}
+       active={this.state.active}/>);
   }
 }

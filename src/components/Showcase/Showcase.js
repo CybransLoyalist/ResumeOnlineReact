@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import LinkIcon from './LinkIcon';
-import ABOUT from "../data/About";
+import LinkIcon from '../Util/LinkIcon';
+import ShortInfoBlock from '../Util/ShortInfoBlock';
+import ABOUT from "../../data/About";
 
 export default class Showcase extends Component {
   render() {
@@ -23,10 +24,10 @@ export default class Showcase extends Component {
               </div>
               <div className="col-md-8">
                 <div className="d-flex flex-column" >
-                  <div className="p-4 lead header-item">Krystyna Ślusarczyk</div>
-                  <div className="p-4 lead header-item">.NET Software Developer</div>
-                  <div className="p-4 lead header-item">Motabi Ltd.</div>
-                  <div className="p-4 lead header-item"><i className="fa fa-envelope" aria-hidden="true" onClick={() => this.sendEmail()}></i> slusarczyk.krystyna@gmail.com</div>
+                  <ShortInfoBlock content="Krystyna Ślusarczyk"/>
+                  <ShortInfoBlock content=".NET Software Developer"/>
+                  <ShortInfoBlock content="Motabi Ltd."/>
+                  <ShortInfoBlock content={<div><i className="fa fa-envelope" aria-hidden="true"></i> slusarczyk.krystyna@gmail.com</div>}/>
                 </div>
               </div>
             </div>
@@ -43,17 +44,5 @@ export default class Showcase extends Component {
       </section>
     </div>
     );
-  }
-
-  sendEmail()
-  {
-    var link = "mailto:me@example.com"
-             + "?cc=myCCaddress@example.com"
-             + "&subject=" + escape("This is my subject")
-             + "&body=aaa";
-    ;
-
-    window.location.href = link;
-
   }
 }

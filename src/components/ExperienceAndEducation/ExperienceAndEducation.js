@@ -5,25 +5,9 @@ export default class ExperienceAndEducation extends Component {
 
   componentWillMount()
   {
-    $(document).ready(function() {
-
-      $('.timeline-item').each(function(index, value) {
-        var content = $(this).find('.timeline-content');
-        $(content).css("display", "none");
-
-        $(this).popover({
-          html: true,
-          content: content.html(),
-          placement: index % 2 == 0
-            ? "left"
-            : "right"
-        });
-      });
-
-      $('.timeline-item').popover('show');
-      $('.timeline-content-subheader').addClass('text-muted');
-    });
+    this.setTimelinePopups();
   }
+
   render() {
     return (
       <div>
@@ -42,5 +26,26 @@ export default class ExperienceAndEducation extends Component {
         </section>
       </div>
     );
+  }
+
+  setTimelinePopups()
+  {
+    $(document).ready(function() {
+      $('.timeline-item').each(function(index, value) {
+        var content = $(this).find('.timeline-content');
+        $(content).css("display", "none");
+
+        $(this).popover({
+          html: true,
+          content: content.html(),
+          placement: index % 2 == 0
+            ? "left"
+            : "right"
+        });
+      });
+
+      $('.timeline-item').popover('show');
+      $('.timeline-content-subheader').addClass('text-muted');
+    });
   }
 }

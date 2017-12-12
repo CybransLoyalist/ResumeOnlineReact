@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import EXPERIENCE_AND_EDUCATION from "../data/ExperienceAndEducation";
+import EXPERIENCE_AND_EDUCATION from "../../data/ExperienceAndEducation";
 
 export default class TimelineItem extends Component {
   render() {

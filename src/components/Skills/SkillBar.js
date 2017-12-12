@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import TimelineItem from './TimelineItem';
 
 export default class SkillBar extends Component {
 
