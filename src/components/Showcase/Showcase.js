@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LinkIcon from '../Util/LinkIcon';
 import ShortInfoBlock from '../Util/ShortInfoBlock';
 import ABOUT from "../../data/About";
+import profilePhoto from '../../img/kslusarczyk.jpg'
 
 export default class Showcase extends Component {
   render() {
@@ -14,7 +15,7 @@ export default class Showcase extends Component {
               <div className="col-md-4 text-center p-3">
                 <div className="d-flex flex-column row-hl">
                   <div>
-                    <img src="src/img/kslusarczyk.jpg" className="img-fluid img-circle" alt="Cinque Terre"/>
+                    <img src={profilePhoto} className="img-fluid img-circle" alt="Cinque Terre"/>
                   </div>
                   <div className="p-4">
                     <LinkIcon href="https://www.linkedin.com/in/krystyna-%C5%9Blusarczyk-634576a4/" icon="fa-linkedin" buttonClass="btn-primary"/>
